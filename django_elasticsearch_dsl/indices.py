@@ -1,13 +1,13 @@
 from copy import deepcopy
 
-from django.utils.encoding import python_2_unicode_compatible
+# from django.utils.encoding import python_2_unicode_compatible
 from elasticsearch_dsl import Index as DSLIndex
 
 from .apps import DEDConfig
 from .registries import registry
 
 
-@python_2_unicode_compatible
+# @python_2_unicode_compatible
 class Index(DSLIndex):
     def __init__(self, *args, **kwargs):
         super(Index, self).__init__(*args, **kwargs)
